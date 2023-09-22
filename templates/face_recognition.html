@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/face_recognition.css') }}">
+    <link rel="stylesheet" href="face_recognition.css">
+    <title>Face Recognition</title>
+</head>
+<body class="body">
+    
+    <div class="body1">
+        <div class="left_section">
+            <h1 class="titlle">FACE RECOGNITION</h1>
+            <div class="frame" id="video-container">
+                <img class="video_frame" id="video" src="{{ url_for('video') }}" width="840" height="500">
+            </div>
+            <div>
+                <p class="attention">Attention!!! <span class="attention_text">Please get your face colser to the camera.</span></p>
+            </div> 
+            <div class="camera_active">
+                {% if camera_active %}
+                    <button class="camera_active_button">{{ camera_active }}</button>
+                {% endif %}
+            </div>
+            <form action="{{ url_for('choose_camera') }}" method="post">
+                <div class="choose_camera">
+                    <p>Choose Your Camera</p>
+                    <button name="camera1" class="camera1" value="yes">1</button>
+                    <button name="camera2" class="camera2" value="yes">2</button>
+                </div>
+            </form>
+        </div>
+    
+        <div class="right_section">
+            <div class="infomation">
+                <div class="div_block">
+                    <p class="face_detected">Scanning...
+                        
+                        {% if face_detected %}
+                            <span class="face_detected_text">{{ face_detected }}</span>
+                        {% endif %}
+
+                        {% if not_face_detected %}
+                            <span class="not_face_detected_text">{{not_face_detected}}</span>
+                        {% endif %}
+                    </p>
+                </div>
+                <div class="div_block">
+                    <p class="verify_status">Verify Status:
+                        {% if verified_face %}
+                            <span class="verify_status_text">{{ verified_face }}</span>
+                        {% endif %}
+                    
+                    </p>
+                </div>
+                
+                <div>
+                    <p class="info">Information:</p>
+
+                    <div class="info_table">
+                        <div class="div_block">
+                            <p class="sub_info">Name:  
+                                {% if name %}
+                                    <span class="sub_info_text">{{ name }}</span>
+                                {% endif %}
+                            </p>
+                        </div>
+    
+                        <div class="div_block">
+                            <p class="sub_info">Date time: 
+                                {% if date_scan %}
+                                    <span class="sub_info_text">{{ date_scan }}</span>
+                                {% endif %}     
+                                 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <form action="{{ url_for('face_recognition') }}" method="post">
+                <button class="scanning_button" value="scan">Scanning</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

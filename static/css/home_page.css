@@ -1,0 +1,163 @@
+.body{
+    background-image:url('../Images/face_recognition_wallpapers1.png') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(1px);
+    z-index: 999;
+    position: relative;
+}
+
+.contents{
+    position: relative;
+    align-content: center;
+    left: 50%;
+}
+
+
+.login_text{
+    position: absolute;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    display: block;
+    top: 150px;
+    padding-bottom: 0px;
+    left: 0px;
+}
+
+.login_text:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.input_bar{
+    position: absolute;
+    top: 230px;
+    left: -120px;
+    padding-top: 10px;;
+    padding: 50px 20px 50px 20px;
+}
+
+.username{
+    display: block;
+    padding: 10px 0px 10px 0px;
+    width: 300px;
+    margin-bottom: 15px;
+    border-width: 1px;
+    border-color: white;
+    background: transparent;
+    border-radius: 3px;
+    padding-left: 10px;
+    font-size: 15px;
+    transition: margin-bottom 0.5s;
+    color: rgb(255, 255, 255);
+}
+
+.username::placeholder{
+    font-size: 15px;
+    color: white;
+    opacity: 0.6;
+}
+
+.username:hover{
+    opacity: 0.8;
+    margin-bottom: 18px;
+}
+
+.password{
+    display: block;
+    padding: 10px 0px 10px 0px;
+    width: 300px;
+    margin-bottom: 15px;
+    border-width: 1px;
+    border-color: white;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    border-radius: 3px;
+    padding-left: 10px;
+    font-size: 15px;
+    transition: margin-bottom 0.5s;
+}
+
+.password::placeholder{
+    font-size: 15px;
+    color: white;
+    opacity: 0.6;
+}
+
+.password:hover{
+    opacity: 0.8;
+    margin-bottom: 18px;
+}
+
+.account_created{
+    color: rgb(150, 250, 0);
+    font-size: 13px;
+    margin-left: 110px;
+    transition: font-size 0.5s;
+}
+
+.account_created:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.login_failed{
+    color: rgb(187, 38, 38);
+    font-size: 14px;
+    margin-left: 100px;
+    transition: font-size 0.5s;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.login_failed:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.insert_login_failed{
+    color: rgb(187, 38, 38);
+    font-size: 14px;
+    margin-left: 30px;
+    transition: font-size 0.5s;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.insert_login_failed:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.administrator{
+    color: white;
+    margin-left: 45px;
+    font-size: 14px;
+    transition: font-size 0.5s;
+}
+
+.administrator:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 13px;
+}
+
+.login_button{
+    position: absolute;
+    padding: 8px 20px 8px 20px;
+    border-radius: 15px;
+    border: none;
+    font-weight: bold;
+    top: 150px;
+    left: 140px;
+    transition: padding 0.5s;
+    margin-top: 70px;
+    opacity: 0.8;
+}
+
+.login_button:hover{
+    opacity: 1;
+    cursor: pointer;
+    padding: 10px 21px 10px 21px;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/registration_page.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/registration_header.css') }}">
+    <title>Registration</title>
+</head>
+<body class="body">
+    <div class="header">
+        <div class="header_left">
+            <p>Face Recognition System</p>
+        </div>
+        <div class="header_center"></div>
+        <div class="header_right">
+            <p class="home">Home</p>
+            <p class="about">About</p>
+            <a href="{{ url_for('login') }}" class="login">Login</a>
+            <p class="contact">Contact</p>
+        </div>
+    </div>
+    
+    <div class="contents">
+        <p class="register_text">Register</p>
+        <form class="input_bar" action="/registration" method="post" enctype="multipart/form-data">
+            <input name="username" class="username" type="text" placeholder="Username">
+            <input name="email" class="email" type="email" placeholder="Email">
+            <input name="password" class="password" type="password" placeholder="Password">
+            <input name="confirm_password" class="confirm_password" type="password" placeholder="Confirm Password">
+            {% if short_username%}
+                <p class="error">{{ short_username }}</p>
+            {% endif %}
+
+            {% if not_match%}
+                <p class="error">{{ not_match }}</p>
+            {% endif %}
+
+            {% if not_created %}
+                <p class="error"> {{ not_created }} </p>
+            {% endif %}
+
+            {% if privacy %}
+                <p class="error"> {{ privacy }} </p>
+            {% endif %}
+
+            {% if face_detection_failed %}
+                <p class="error">{{ face_detection_failed }}</p>
+            {% endif %}
+
+            {% if choose_gender %}
+                <p class="error"> {{ choose_gender }} </p>
+            {% endif %}
+         
+            <div>
+                {% if no_pic %}
+                    <p class="error">{{ no_pic }}</p>
+                {% else %}
+                    <p class="error">Chosse a Picture that has your face </p>
+                {% endif %}
+                <input name="choose_file" type="file" class="choose_file">
+            </div>
+            
+            <div>
+                <div class="checkbox_gender">
+                    <input name="male_checkbox" type="checkbox" value="yes">
+                    <p class="male">Male</p>
+                </div>
+                <div class="checkbox_gender">
+                    <input name="female_checkbox" type="checkbox" value="yes">
+                    <p class="female">Female</p>
+                </div>
+            </div>
+            <div class="checkbox_privacy">
+                <input name="privacy_checkbox" type="checkbox" value="yes">
+                <p class="agree_text">I have read and accept the <span class="privacy">Privacy statement</span></p>
+            </div>
+            <button class="register_button" type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>

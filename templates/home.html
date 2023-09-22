@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home_page.css">
+    <link rel="stylesheet" href="home_header.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home_page.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home_header.css') }}">
+    <title>Home</title>
+</head>
+<body class="body">
+    <div class="header">
+        <div class="header_left">
+            <p>Face Recognition System</p>
+        </div>
+        <div class="header_center"></div>
+        <div class="header_right">
+            <p class="home">Home</p>
+            <p class="about">About</p>
+            <a href="{{ url_for('registration') }}" class="register">Register</a>
+            <p class="contact">Contact</p>
+        </div>
+    </div>
+    <div class="contents">
+        <p class="login_text">Login</p>
+        <form class="input_bar" action="#" method="post">
+            <input name="username_login" class="username" type="text" placeholder="Username">
+            <input name="password_login" class="password" type="password" placeholder="Password">
+            <p class="administrator">Administrator: username@Administrator</p>
+            {% if  account_created %}
+                <p class="account_created">{{  account_created }}</p>
+            {% endif %}
+
+            {% if  login_failed %}
+                <p class="login_failed">{{  login_failed }}</p>
+            {% endif %}
+
+            {% if  insert_login_failed %}
+                <p class="insert_login_failed">{{  insert_login_failed }}</p>
+            {% endif %}
+            <button class="login_button" type="submit">Login</button>
+        </form>
+       
+    </div>
+</body>
+</html>

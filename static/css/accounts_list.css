@@ -1,0 +1,221 @@
+.body{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+}
+
+.header{
+    height: 80px;
+    background-color: black;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.header_left{
+    display: flex;
+    width: 300px;
+}
+
+.center_header{
+    display: flex;
+    flex: 1;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.header_right{
+    display: flex;
+    width: 300px;
+}
+
+.accounts_list {
+    background-color: rgb(243, 241, 238);
+    height: 625px;
+    position: relative;
+    top: 250px;
+    overflow-y: scroll;
+}
+
+.column{
+    position: absolute;
+    height: auto;
+    display: grid;
+    grid-template-columns: 100px 150px 300px 350px 350px 75px 150px ;
+    column-gap: 10px;
+    top: 10px;
+    left: 50px;
+}
+
+.column_name{
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    height: 0px;
+    margin-bottom: 30px;
+}
+
+
+
+.users_section{
+    position: absolute;
+    top: 60px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 100px 150px 300px 350px 350px 75px 150px ;
+    column-gap: 10px;
+    left: 50px;
+}
+  
+
+.id,
+.name,
+.email,
+.password,
+.gender,
+.date_joined
+{
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    transition: font-size 0.5s;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+.gender{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.date_joined{
+    font-size: 13px;
+    width: 150px;
+    text-align: center;
+}
+
+.image{
+    width: 60px;
+    height: 60px;
+}
+
+
+.users_column{
+    margin-bottom: 10px;
+    transition: opacity 0.5s;
+    height: 60px;
+}
+
+.id_column{
+    background-color: white;
+    margin-bottom: 10px;
+    transition: opacity 0.5s;
+}
+
+
+.name_column{
+    background-color: white;
+    margin-bottom: 10px;
+    transition: opacity 0.5s;
+}
+
+.email_column{
+    background-color: white;
+    margin-bottom: 10px;
+    transition: opacity 0.5s;
+}
+
+.password_column{
+    background-color: white;
+    margin-bottom: 10px;
+    transition: opacity 0.5s;
+}
+
+.gender_column{
+    background-color: white;
+    margin-bottom: 10px;
+    transition: opacity 0.5s;
+    width: 80px;
+}
+
+.date_joined_column{
+    background-color: rgb(253, 253, 253);
+    margin-bottom: 10px;
+    transition: opacity 0.5s;
+    width: 150px;
+    margin-left: 10px;
+}
+
+
+.users_column:hover,
+.date_joined_column:hover,
+.id_column:hover,
+.name_column:hover,
+.email_column:hover,
+.password_column:hover,
+.gender_column:hover
+.users_section:hover
+{
+    opacity: 0.8;
+    cursor: pointer;
+    top: 27px;
+}
+
+
+
+.image{
+    width: 60px;
+    height: 60px;
+    margin-left: 20px;
+    object-fit: cover;
+
+}
+
+
+.bottom{
+    height: 80px;
+    background-color: black;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+
+}
+
+.bottom_left{
+    display: flex;
+    width: 300px;
+}
+
+.bottom_center{
+    display: flex;
+    flex: 1;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.bottom_right{
+    display: flex;
+    width: 300px;
+}
