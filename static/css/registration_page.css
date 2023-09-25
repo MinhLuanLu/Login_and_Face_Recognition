@@ -1,5 +1,5 @@
 .body{
-    background-image:url('../Images/face_recognition_wallpapers1.png') ;
+    background-image: url('../Images/face_recognition_wallpapers.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     backdrop-filter: blur(1px);
@@ -8,7 +8,7 @@
 }
 
 .contents{
-    position: relative;
+    position: absolute;
     align-content: center;
     left: 50%;
 }
@@ -22,7 +22,7 @@
     display: block;
     top: 100px;
     padding-bottom: 0px;
-    left: -20px;
+    left: -65px;
 }
 
 .register_text:hover{
@@ -33,7 +33,7 @@
 .input_bar{
     position: absolute;
     top: 170px;
-    left: -120px;
+    left: -170px;
     padding-top: 10px;;
     padding: 50px 20px 50px 20px;
 }
@@ -192,7 +192,7 @@
     border: none;
     font-weight: bold;
     top: 370px;
-    left: 130px;
+    left: 120px;
     transition: padding 0.5s;
     opacity: 0.8;
     margin-top: 20px;
@@ -220,4 +220,10 @@
     font-size: 14px;
     cursor: pointer;
     
+}
+
+@media(max-width:1600px){
+    .body{
+        background-repeat: repeat;
+    }
 }

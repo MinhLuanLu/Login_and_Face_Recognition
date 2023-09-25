@@ -1,6 +1,11 @@
 .body{
     position: relative;
     background-color: rgb(255, 255, 255);
+    background-image: url('../Images/face_recognition_wallpapers.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
 }
 
 .header{
@@ -40,9 +45,10 @@
 
 .accounts_list {
     background-color: rgb(243, 241, 238);
-    height: 625px;
+    opacity: 0.9;
+    height: 650px;
     position: relative;
-    top: 250px;
+    top: 300px;
     overflow-y: scroll;
 }
 

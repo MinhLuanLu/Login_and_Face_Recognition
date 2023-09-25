@@ -1,20 +1,18 @@
-.body{
-    background-image:url('../Images/face_recognition_wallpapers1.png') ;
-    background-repeat: no-repeat;
+.body {
+    background-image: url('../Images/face_recognition_wallpapers.jpg');
     background-size: cover;
+    background-repeat: repeat;
     backdrop-filter: blur(1px);
-    z-index: 999;
     position: relative;
 }
 
-.contents{
-    position: relative;
+.contents {
+    position: absolute;
     align-content: center;
     left: 50%;
 }
 
-
-.login_text{
+.login_text {
     position: absolute;
     color: white;
     font-size: 35px;
@@ -22,7 +20,8 @@
     display: block;
     top: 150px;
     padding-bottom: 0px;
-    left: 0px;
+    left: -50px;
+
 }
 
 .login_text:hover{
@@ -33,9 +32,9 @@
 .input_bar{
     position: absolute;
     top: 230px;
-    left: -120px;
     padding-top: 10px;;
     padding: 50px 20px 50px 20px;
+    left: -170px;
 }
 
 .username{
@@ -150,7 +149,7 @@
     border: none;
     font-weight: bold;
     top: 150px;
-    left: 140px;
+    left: 132px;
     transition: padding 0.5s;
     margin-top: 70px;
     opacity: 0.8;
@@ -160,4 +159,12 @@
     opacity: 1;
     cursor: pointer;
     padding: 10px 21px 10px 21px;
+}
+
+
+@media(max-width:1600px){
+    .body{
+        background-repeat: repeat;
+    }
+   
 }

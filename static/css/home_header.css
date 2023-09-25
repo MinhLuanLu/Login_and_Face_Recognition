@@ -101,3 +101,14 @@
     opacity: 1;
     font-size: 21px;
 }
+
+@media(max-width:1600px){
+    .header_left{
+        font-size: 25px;
+        margin-left: 50px;
+    }
+
+    .header_right{
+        width: 300px;
+    }
+}

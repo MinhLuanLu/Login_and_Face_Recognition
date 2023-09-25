@@ -1,8 +1,7 @@
 .body{
-    background-image:url('../Images/face_recognition_wallpapers1.png') ;
+    background-image: url('../Images/face_recognition_wallpapers.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    backdrop-filter: blur(1px);
     z-index: 999;
     position: relative;
 }
@@ -198,3 +197,40 @@
 
 
 
+@media(max-width:1600px){
+    .video_frame{
+        width: 540px;
+        height: 300px;
+    }
+
+    .attention{
+        left: 120px;
+        top: 450px;
+    }
+
+    .titlle{
+        left: 150px;
+        font-size: 23px;
+    }
+
+    .choose_camera{
+        left: 450px;
+    }
+
+    .right_section{
+        top: 100px;
+    }
+
+    .info_table{
+        width: 550px;
+        height: 250px;
+    }
+   
+    .scanning_button{
+        margin-left: 200px;
+    }
+
+    .left_section{
+        top: 50px;
+    }
+}
