@@ -106,10 +106,6 @@ SQLAlchemy==2.0.20
 stack-data==0.6.2
 tensorboard==2.13.0
 tensorboard-data-server==0.7.1
-tensorflow==2.13.0
-tensorflow-estimator==2.13.0
-tensorflow-intel==2.13.0
-tensorflow-io-gcs-filesystem==0.31.0
 termcolor==2.3.0
 tk==0.1.0
 tqdm==4.65.0
