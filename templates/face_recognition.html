@@ -14,6 +14,7 @@
             <h1 class="titlle">FACE RECOGNITION</h1>
             <div class="frame" id="video-container">
                 <img class="video_frame" id="video" src="{{ url_for('video') }}" width="840" height="500">
+                <video class="video_frame" id="webcam" autoplay></video>
             </div>
             <div>
                 <p class="attention">Attention!!! <span class="attention_text">Please get your face colser to the camera.</span></p>
@@ -86,4 +87,5 @@
     </div>
 
 </body>
+<script src="static/app.js"></script>
 </html>
